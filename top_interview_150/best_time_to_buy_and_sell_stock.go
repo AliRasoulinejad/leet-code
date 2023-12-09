@@ -1,24 +1,22 @@
 package top_interview_150
 
 // You can access to this problem via this link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-func maxProfit(allPrices []int) int {
-	var profit int
-	for i := 0; i < len(allPrices); i++ {
-		prices := allPrices[i:]
-
-		buy := prices[0]
-		sell := prices[0]
-		for j := 1; j < len(prices); j++ {
-			if prices[j] > sell {
-				sell = prices[j]
-			}
+func maxProfit(prices []int) int {
+	min := prices[0]
+	newMin := prices[0]
+	max := prices[0]
+	for i := 0; i < len(prices); i++ {
+		if prices[i] < min && prices[i] < newMin {
+			newMin = prices[i]
 		}
 
-		epochProfit := sell - buy
-		if epochProfit > profit {
-			profit = epochProfit
+		if newMin < min && prices[i]-newMin >= max-min {
+			max = prices[i]
+			min = newMin
+		} else if prices[i] > max {
+			max = prices[i]
 		}
 	}
 
-	return profit
+	return max - min
 }
