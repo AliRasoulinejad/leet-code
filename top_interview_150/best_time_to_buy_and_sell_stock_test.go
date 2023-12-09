@@ -20,7 +20,7 @@ func TestBestTimeToBuyAndSellStock(t *testing.T) {
 	}
 
 	for _, testCase := range testCases {
-		response := bestTimeToBuyAndSellStock(testCase.inputPrices)
+		response := maxProfit(testCase.inputPrices)
 		if response != testCase.expectedProfit {
 			t.Errorf("expected response is: %d, but got %d", testCase.expectedProfit, response)
 		}
