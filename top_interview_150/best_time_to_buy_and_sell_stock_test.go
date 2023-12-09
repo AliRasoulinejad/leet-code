@@ -17,6 +17,10 @@ func TestBestTimeToBuyAndSellStock(t *testing.T) {
 			inputPrices:    []int{7, 6, 4, 3, 1},
 			expectedProfit: 0,
 		},
+		{
+			inputPrices:    []int{1, 2},
+			expectedProfit: 1,
+		},
 	}
 
 	for _, testCase := range testCases {
