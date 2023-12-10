@@ -1,4 +1,4 @@
-package top_interview_150
+package best_time_to_buy_and_sell_stock
 
 import (
 	"testing"
