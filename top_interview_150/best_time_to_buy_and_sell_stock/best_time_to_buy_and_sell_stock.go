@@ -1,4 +1,4 @@
-package top_interview_150
+package best_time_to_buy_and_sell_stock
 
 // You can access to this problem via this link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 func maxProfit(prices []int) int {

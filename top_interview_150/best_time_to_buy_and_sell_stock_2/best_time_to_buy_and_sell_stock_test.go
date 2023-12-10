@@ -1,4 +1,4 @@
-package top_interview_150
+package best_time_to_buy_and_sell_stock_2
 
 import (
 	"testing"
@@ -11,7 +11,11 @@ func TestBestTimeToBuyAndSellStock(t *testing.T) {
 	}{
 		{
 			inputPrices:    []int{7, 1, 5, 3, 6, 4},
-			expectedProfit: 5,
+			expectedProfit: 7,
+		},
+		{
+			inputPrices:    []int{1, 2, 3, 4, 5},
+			expectedProfit: 4,
 		},
 		{
 			inputPrices:    []int{7, 6, 4, 3, 1},
@@ -23,7 +27,7 @@ func TestBestTimeToBuyAndSellStock(t *testing.T) {
 		},
 		{
 			inputPrices:    []int{4, 7, 1, 2, 11},
-			expectedProfit: 10,
+			expectedProfit: 13,
 		},
 	}
 
